@@ -1,12 +1,13 @@
-package com.example.healthy;
+package com.example.healthy.Dangky;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import com.example.healthy.R;
 
 public class Activity_Dangky extends AppCompatActivity {
 

@@ -65,8 +65,8 @@
 
     <ImageButton
         android:id="@+id/login"
-        android:layout_width="191dp"
-        android:layout_height="107dp"
+        android:layout_width="172dp"
+        android:layout_height="68dp"
         android:layout_gravity="center"
         android:background="@drawable/logins">
 
@@ -75,7 +75,7 @@
     <TextView
         android:textColor="#A25A5A"
         android:textAlignment="center"
-        android:paddingTop="20dp"
+        android:paddingTop="60dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Bạn chưa có tài khoản?"
@@ -85,10 +85,10 @@
 
     <ImageButton
         android:id="@+id/signup"
-        android:layout_width="165dp"
-        android:layout_height="93dp"
+        android:layout_width="153dp"
+        android:layout_height="54dp"
         android:layout_gravity="center"
-        android:background="@drawable/sign">
+        android:background="@drawable/signnn">
 
     </ImageButton>
 

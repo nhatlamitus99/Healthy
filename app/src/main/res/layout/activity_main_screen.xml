@@ -34,6 +34,7 @@
             android:layout_width="wrap_content"
             android:src="@drawable/foods"
             android:background="@drawable/foods"
+            android:id="@+id/food"
             android:layout_height="wrap_content">
 
         </ImageButton>
@@ -47,6 +48,7 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:src="@drawable/drink"
+            android:id="@+id/drink"
             android:background="@drawable/drink"
             android:layout_height="wrap_content">
 
@@ -64,6 +66,7 @@
             android:layout_width="wrap_content"
             android:background="@drawable/exercise"
             android:layout_gravity="center"
+            android:id="@+id/exercise"
             android:layout_height="wrap_content">
 
         </ImageButton>
@@ -71,6 +74,7 @@
         <ImageButton
             android:layout_width="150dp"
             android:layout_height="200dp"
+            android:id="@+id/idea"
             android:layout_gravity="center"
             android:background="@drawable/ideas">
 
@@ -79,6 +83,7 @@
         <ImageButton
             android:layout_width="121dp"
             android:layout_height="105dp"
+            android:id="@+id/sleep"
             android:layout_gravity="center"
             android:background="@drawable/sleeps">
 
@@ -97,6 +102,7 @@
             android:background="@drawable/alarms"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
+            android:id="@+id/alarm"
             android:layout_height="wrap_content">
 
         </ImageButton>
@@ -112,6 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:id="@+id/statistic"
             android:background="@drawable/statistics">
 
         </ImageButton>

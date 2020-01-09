@@ -7,21 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Activity_Dangky1 extends AppCompatActivity {
+public class DrinkActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__dangky1);
+        setContentView(R.layout.activity_drink);
 
-        ImageButton btnNext = (ImageButton) this.findViewById(R.id.nextstep);
-        btnNext.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnOk = (ImageButton) findViewById(R.id.ok);
+        btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_Dangky1.this, MainScreenActivity.class);
+                Intent intent = new Intent(DrinkActivity.this, MainScreenActivity.class);
                 startActivity(intent);
             }
         });
     }
 }
-
