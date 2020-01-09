@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/ground"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainScreenActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:textSize="30dp"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:textStyle="bold"
+        android:background="@drawable/ground"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:paddingTop="20dp"
+        android:text="QUẢN LÝ HOẠT ĐỘNG"
+        android:textColor="#2E0E9C"
+        >
+
+    </TextView>
+
+    <LinearLayout
+        android:paddingTop="70dp"
+        android:paddingBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@drawable/foods"
+            android:background="@drawable/foods"
+            android:layout_height="wrap_content">
+
+        </ImageButton>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:src="@drawable/drink"
+            android:background="@drawable/drink"
+            android:layout_height="wrap_content">
+
+        </ImageButton>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:paddingLeft="4dp"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:background="@drawable/exercise"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ideas">
+
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="121dp"
+            android:layout_height="105dp"
+            android:layout_gravity="center"
+            android:background="@drawable/sleeps">
+
+        </ImageButton>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:background="@drawable/alarms"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+        </ImageButton>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <ImageButton
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/statistics">
+
+        </ImageButton>
+
+    </LinearLayout>
+
+</LinearLayout>

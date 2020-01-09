@@ -64,12 +64,11 @@
     </LinearLayout>
 
     <ImageButton
-        android:layout_width="wrap_content"
+        android:id="@+id/login"
+        android:layout_width="191dp"
         android:layout_height="107dp"
         android:layout_gravity="center"
-        android:id="@+id/login"
-        android:background="@drawable/login"
-        android:src="@drawable/login">
+        android:background="@drawable/logins">
 
     </ImageButton>
 
@@ -85,12 +84,11 @@
     </TextView>
 
     <ImageButton
-        android:layout_width="wrap_content"
+        android:id="@+id/signup"
+        android:layout_width="165dp"
         android:layout_height="93dp"
         android:layout_gravity="center"
-        android:background="@drawable/signup"
-        android:id="@+id/signup"
-        android:src="@drawable/signup">
+        android:background="@drawable/sign">
 
     </ImageButton>
 

@@ -137,10 +137,10 @@
 
         <ImageButton
             android:layout_gravity="center"
-            android:background="@drawable/complete"
+            android:background="@drawable/ok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/complete"
+            android:src="@drawable/ok"
             android:id="@+id/nextstep">
 
         </ImageButton>

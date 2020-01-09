@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         imgbtnLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Đăng nhập thành công !!!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, MainScreenActivity.class);
+                startActivity(intent);
             }
         });
 
