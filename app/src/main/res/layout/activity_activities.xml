@@ -13,7 +13,7 @@
         android:paddingBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MÓN ĂN"
+        android:text="HOẠT ĐỘNG"
         style="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30dp"
         android:textColor="#0C8F7F"
@@ -23,7 +23,7 @@
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv"
+        android:id="@+id/rv_activity"
         android:layout_width="302dp"
         android:layout_height="219dp"
         android:layout_gravity="center"
@@ -35,7 +35,7 @@
         android:paddingBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="THỨC UỐNG"
+        android:text="BÀI TẬP GYM"
         style="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30dp"
         android:textColor="#0C8F7F"
@@ -45,7 +45,7 @@
     </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDrink"
+        android:id="@+id/rv_gym"
         android:layout_width="302dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

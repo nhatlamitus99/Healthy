@@ -19,7 +19,7 @@ import jp.wasabeef.recyclerview.adapters.SlideInBottomAnimationAdapter;
 import jp.wasabeef.recyclerview.adapters.SlideInRightAnimationAdapter;
 import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 
-public class FoodActivity extends AppCompatActivity {
+public class ActivitiesActivity extends AppCompatActivity {
 
     ArrayList<Item_RV> list;
     Adapter_RV adapter_rv;
@@ -52,7 +52,7 @@ public class FoodActivity extends AppCompatActivity {
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(FoodActivity.this, MainScreenActivity.class);
+                Intent intent = new Intent(ActivitiesActivity.this, MainScreenActivity.class);
                 startActivity(intent);
             }
         });
@@ -62,34 +62,30 @@ public class FoodActivity extends AppCompatActivity {
 
     private void Init_ListDrink() {
         list_drink = new ArrayList<Item_RV>();
-        list_drink.add(new Item_RV(R.drawable.ruou, "Rượu", 0));
-        list_drink.add(new Item_RV(R.drawable.bia, "Bia", 0));
-        list_drink.add(new Item_RV(R.drawable.trasua, "Trà Sữa", 0));
-        list_drink.add(new Item_RV(R.drawable.nuocloc, "Nước Lọc", 0));
-        list_drink.add(new Item_RV(R.drawable.coca, "Nước Ngọt", 0));
-        list_drink.add(new Item_RV(R.drawable.soda, "Nước có Ga", 0));
-        list_drink.add(new Item_RV(R.drawable.ruou, "Rượu", 0));
-        list_drink.add(new Item_RV(R.drawable.bia, "Bia", 0));
-        list_drink.add(new Item_RV(R.drawable.trasua, "Trà Sữa", 0));
-        list_drink.add(new Item_RV(R.drawable.nuocloc, "Nước Lọc", 0));
-        list_drink.add(new Item_RV(R.drawable.coca, "Nước Ngọt", 0));
-        list_drink.add(new Item_RV(R.drawable.ga, "Nước có Ga", 0));
+        list_drink.add(new Item_RV(R.drawable.ruou, "Bóng Đá", 0));
+        list_drink.add(new Item_RV(R.drawable.bia, "Cầu Lông", 0));
+        list_drink.add(new Item_RV(R.drawable.trasua, "Cờ Vua", 0));
+        list_drink.add(new Item_RV(R.drawable.nuocloc, "Golf", 0));
+        list_drink.add(new Item_RV(R.drawable.coca, "Tennis", 0));
+        list_drink.add(new Item_RV(R.drawable.soda, "Chạy Bộ", 0));
+        list_drink.add(new Item_RV(R.drawable.ruou, "Bóng Đá", 0));
+        list_drink.add(new Item_RV(R.drawable.bia, "Cầu Lông", 0));
+        list_drink.add(new Item_RV(R.drawable.trasua, "Cờ Vua", 0));
+        list_drink.add(new Item_RV(R.drawable.nuocloc, "Golf", 0));
+        list_drink.add(new Item_RV(R.drawable.coca, "Tennis", 0));
+        list_drink.add(new Item_RV(R.drawable.soda, "Chạy Bộ", 0));
 
     }
 
     private void Init_ListFood() {
         list = new ArrayList<Item_RV>();
-        list.add(new Item_RV(R.drawable.rices, "Cơm", 0));
-        list.add(new Item_RV(R.drawable.pho, "Phở", 0));
-        list.add(new Item_RV(R.drawable.cake, "Bánh Ngọt", 0));
-        list.add(new Item_RV(R.drawable.fastfood, "Fast food", 0));
-        list.add(new Item_RV(R.drawable.salad, "Salad", 0));
-        list.add(new Item_RV(R.drawable.seafood, "Hải sản", 0));
-        list.add(new Item_RV(R.drawable.rice, "Cơm", 0));
-        list.add(new Item_RV(R.drawable.pho, "Phở", 0));
-        list.add(new Item_RV(R.drawable.cake, "Bánh Ngọt", 0));
-        list.add(new Item_RV(R.drawable.fastfood, "Fast food", 0));
-        list.add(new Item_RV(R.drawable.salad, "Salad", 0));
-        list.add(new Item_RV(R.drawable.seafood, "Hải sản", 0));
+        list.add(new Item_RV(R.drawable.rices, "Hít Đất", 0));
+        list.add(new Item_RV(R.drawable.pho, "Xà Đơn", 0));
+        list.add(new Item_RV(R.drawable.cake, "Swat", 0));
+        list.add(new Item_RV(R.drawable.fastfood, "Đẩy Tạ", 0));
+        list.add(new Item_RV(R.drawable.rices, "Hít Đất", 0));
+        list.add(new Item_RV(R.drawable.pho, "Xà Đơn", 0));
+        list.add(new Item_RV(R.drawable.cake, "Swat", 0));
+        list.add(new Item_RV(R.drawable.fastfood, "Đẩy Tạ", 0));
     }
 }

@@ -10,10 +10,10 @@
     tools:context=".FoodActivity">
 
     <TextView
-        android:paddingBottom="10dp"
+        android:paddingBottom="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MÓN ĂN"
+        android:text="WATER"
         style="@style/TextAppearance.AppCompat.Body1"
         android:textSize="30dp"
         android:textColor="#0C8F7F"
@@ -31,28 +31,6 @@
 
     </androidx.recyclerview.widget.RecyclerView>
 
-    <TextView
-        android:paddingBottom="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="THỨC UỐNG"
-        style="@style/TextAppearance.AppCompat.Body1"
-        android:textSize="30dp"
-        android:textColor="#0C8F7F"
-        android:textStyle="bold"
-        android:layout_gravity="center">
-
-    </TextView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDrink"
-        android:layout_width="302dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingBottom="50dp"
-        android:orientation="horizontal">
-
-    </androidx.recyclerview.widget.RecyclerView>
 
     <ImageButton
         android:id="@+id/btnOK"

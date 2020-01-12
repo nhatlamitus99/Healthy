@@ -1,0 +1,121 @@
+package com.example.healthy;
+
+import android.content.Context;
+import android.graphics.Color;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Adapter_RV extends RecyclerView.Adapter<Adapter_RV.ViewHolder> {
+
+    private ArrayList<Item_RV> list;
+    private Context mContext;
+
+
+    public Adapter_RV(ArrayList<Item_RV> mStutents, Context mContext) {
+        this.list = mStutents;
+        this.mContext = mContext;
+    }
+
+
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        Context context = parent.getContext();
+        LayoutInflater inflater = LayoutInflater.from(context);
+
+        View studentView = inflater.inflate(R.layout.item_rv, parent, false);
+
+        ViewHolder viewHolder = new ViewHolder(studentView);
+        return viewHolder;
+
+    }
+
+    @Override
+    public void onBindViewHolder(final ViewHolder holder, int position) {
+        Item_RV students = list.get(position);
+
+        holder.title.setText(students.getTitle());
+        holder.number.setText(students.getNumber()+"");
+        holder.pic.setImageResource(students.getPic());
+
+
+
+        holder.setItemClickListener(new ItemClickListener() {
+            @Override
+            public void onClick(View view, int position, boolean isLongClick) {
+                holder.btnPlus.setVisibility(View.VISIBLE);
+                holder.layout.setBackgroundColor(Color.rgb(200,137,27));
+                holder.btnPlus.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        holder.number.setText(Integer.parseInt(holder.number.getText().toString())+1+"");
+
+                    }
+                });
+            }
+        });
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+
+
+
+
+    /**
+     * Lớp nắm giữ cấu trúc view
+     */
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        private ItemClickListener itemClickListener;
+
+        private View itemview;
+        public ImageView pic;
+        public TextView title;
+        public TextView number;
+        public ImageButton btnPlus;
+        public LinearLayout layout;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            itemview = itemView;
+            pic = itemView.findViewById(R.id.pic);
+            title = itemView.findViewById(R.id.name);
+            number = itemView.findViewById(R.id.number);
+            btnPlus = itemView.findViewById(R.id.btnPlus);
+            layout = itemView.findViewById(R.id.layout);
+
+            itemView.setOnClickListener(this);
+
+        }
+
+        public void setItemClickListener(ItemClickListener itemClickListener)
+        {
+            this.itemClickListener = itemClickListener;
+        }
+
+        @Override
+        public void onClick(View v) {
+            itemClickListener.onClick(v,getAdapterPosition(),false);
+        }
+
+
+    }
+
+
+}

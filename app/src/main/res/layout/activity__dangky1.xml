@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@drawable/ground"
+    android:background="#D6DDD0"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:background="@drawable/ground"
+        android:background="#C0D8B0"
         android:layout_height="65dp"
         android:text="Thiết lập tài khoản"
         android:textSize="35dp"
@@ -126,8 +126,7 @@
         <SeekBar
             android:layout_weight="4"
             android:layout_gravity="center"
-            android:background="@drawable/ground"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:max="2"
             android:progress="2">

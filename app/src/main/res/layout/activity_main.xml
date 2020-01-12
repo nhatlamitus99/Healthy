@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@drawable/ground"
+    android:background="#D5E4D5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
     tools:context=".MainActivity">
 
     <TextView
-        android:background="@drawable/ground"
+        android:background="#C0D5B1"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="Đăng nhập tài khoản"
@@ -65,8 +65,8 @@
 
     <ImageButton
         android:id="@+id/login"
-        android:layout_width="172dp"
-        android:layout_height="68dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/logins">
 
@@ -79,16 +79,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Bạn chưa có tài khoản?"
+        android:paddingBottom="10dp"
         android:textSize="20dp">
 
     </TextView>
 
     <ImageButton
         android:id="@+id/signup"
-        android:layout_width="153dp"
-        android:layout_height="54dp"
+        android:layout_width="120dp"
+        android:layout_height="39dp"
         android:layout_gravity="center"
-        android:background="@drawable/signnn">
+        android:background="@drawable/btnsign">
 
     </ImageButton>
 
