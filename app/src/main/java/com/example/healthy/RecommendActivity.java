@@ -5,20 +5,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ScrollView;
+import android.widget.Toast;
 
-public class AlarmActivity extends AppCompatActivity {
+public class RecommendActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alarm);
+        setContentView(R.layout.activity_recommend);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Nhắc Nhở");
+        actionBar.setTitle("Lời khuyên cho bạn ");
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayUseLogoEnabled(true);
+
+        int[] x = {1,2,3,4};
+        int[] y = {0,1,0,1};
+
+        LinearRegression linearRegression = new LinearRegression(x,y);
+        Toast.makeText(this, linearRegression.toString(), Toast.LENGTH_LONG).show();
 
 
     }
@@ -27,6 +31,7 @@ public class AlarmActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case android.R.id.home:
+
                 onBackPressed();
                 return true;
 
@@ -35,4 +40,7 @@ public class AlarmActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

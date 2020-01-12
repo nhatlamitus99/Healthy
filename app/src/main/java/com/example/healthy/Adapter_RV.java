@@ -15,12 +15,19 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
 import java.util.List;
 
 public class Adapter_RV extends RecyclerView.Adapter<Adapter_RV.ViewHolder> {
 
     private ArrayList<Item_RV> list;
     private Context mContext;
+
+    private Dictionary<String, Integer> list_water;
+    private Dictionary<String, Integer> list_sleep;
+    private Dictionary<String, Integer> list_eat;
+    private Dictionary<String, Integer> list_drink;
+    private Dictionary<String, Integer> list_activities;
 
 
     public Adapter_RV(ArrayList<Item_RV> mStutents, Context mContext) {
@@ -44,7 +51,7 @@ public class Adapter_RV extends RecyclerView.Adapter<Adapter_RV.ViewHolder> {
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        Item_RV students = list.get(position);
+        final Item_RV students = list.get(position);
 
         holder.title.setText(students.getTitle());
         holder.number.setText(students.getNumber()+"");
@@ -54,13 +61,15 @@ public class Adapter_RV extends RecyclerView.Adapter<Adapter_RV.ViewHolder> {
 
         holder.setItemClickListener(new ItemClickListener() {
             @Override
-            public void onClick(View view, int position, boolean isLongClick) {
+            public void onClick(View view, final int position, boolean isLongClick) {
                 holder.btnPlus.setVisibility(View.VISIBLE);
                 holder.layout.setBackgroundColor(Color.rgb(200,137,27));
                 holder.btnPlus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        holder.number.setText(Integer.parseInt(holder.number.getText().toString())+1+"");
+                        int temp = Integer.parseInt(holder.number.getText().toString())+1;
+                        holder.number.setText(temp+"");
+                        list.get(position).setNumber(temp);
 
                     }
                 });

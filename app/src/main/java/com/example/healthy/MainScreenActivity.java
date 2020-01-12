@@ -23,6 +23,8 @@ import java.util.Locale;
 public class MainScreenActivity extends AppCompatActivity {
 
     ImageView imgbtnFeel;
+    int label;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class MainScreenActivity extends AppCompatActivity {
         ImageButton imgbtnWater = (ImageButton) findViewById(R.id.water);
         ImageButton imgbtnAlarm = (ImageButton) findViewById(R.id.alarm);
         ImageButton imgbtnSta = (ImageButton) findViewById(R.id.statistic);
+        ImageButton imgbtnRec = (ImageButton) findViewById(R.id.idea);
 
         imgbtnFood.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,10 +89,19 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         });
 
+        imgbtnRec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainScreenActivity.this, RecommendActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         imgbtnFeel = (ImageView) findViewById(R.id.feel);
         registerForContextMenu(imgbtnFeel);
+
 
 
 
@@ -119,20 +131,21 @@ public class MainScreenActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.a:
-               //
+                label=1;
             case R.id.b:
-                //
+                label=2;
             case R.id.c:
-                //
+                label=3;
             case R.id.d:
-               //
+               label=4;
             case R.id.e:
-               //
+               label=5;
             case R.id.f:
-                //
+                label=6;
             case R.id.g:
-               //
+                label=7;
         }
+        Toast.makeText(this, item.getTitle(), Toast.LENGTH_LONG).show();
         return super.onContextItemSelected(item);
     }
 

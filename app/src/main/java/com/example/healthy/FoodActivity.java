@@ -13,6 +13,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.example.healthy.Dangky.Item;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,6 +33,9 @@ public class FoodActivity extends AppCompatActivity {
     Adapter_RV adapter_rv;
     ArrayList<Item_RV> list_drink;
     Adapter_RV adapter_rv_drink;
+
+    ArrayList<Item> list_food = new ArrayList<Item>();
+    ArrayList<Item> list_drinks = new ArrayList<Item>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +72,7 @@ public class FoodActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case android.R.id.home:
+                GetData();
                 onBackPressed();
                 return true;
 
@@ -73,6 +80,24 @@ public class FoodActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void GetData() {
+        for(int i=0;i<list.size();i++)
+        {
+            if(list.get(i).getNumber()!=0)
+            {
+                list_food.add(new Item(list.get(i).getTitle(), list.get(i).getNumber()));
+            }
+        }
+        for(int i=0;i<list_drink.size();i++)
+        {
+            if(list.get(i).getNumber()!=0)
+            {
+                list_drinks.add(new Item(list.get(i).getTitle(), list.get(i).getNumber()));
+            }
+        }
+        Toast.makeText(this, list_food.size()+ " món ăn và "+ list_drinks.size()+" thức uống \n đã được cập nhật !!!", Toast.LENGTH_LONG).show();
     }
 
     private String ProcessDate() {

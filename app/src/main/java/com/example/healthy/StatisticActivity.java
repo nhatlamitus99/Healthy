@@ -25,6 +25,7 @@ public class StatisticActivity extends AppCompatActivity {
         setContentView(R.layout.activity_statistic);
 
         ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Thống Kê ");
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         LineChartView lineChartView = findViewById(R.id.chart);
@@ -60,6 +61,7 @@ public class StatisticActivity extends AppCompatActivity {
 
         yAxis.setTextColor(Color.parseColor("#0C8F7F"));
         yAxis.setTextSize(16);
+        yAxis.setName("Tỷ lệ hài lòng (%)");
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {

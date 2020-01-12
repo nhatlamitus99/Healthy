@@ -12,7 +12,7 @@
     <TextView
         android:background="#FFFFFF"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="60dp"
         android:text="Đăng nhập tài khoản"
         android:textSize="30dp"
         android:textColor="#021A97"

@@ -13,6 +13,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.example.healthy.Dangky.Item;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,32 +29,35 @@ import jp.wasabeef.recyclerview.animators.SlideInUpAnimator;
 
 public class ActivitiesActivity extends AppCompatActivity {
 
-    ArrayList<Item_RV> list;
-    Adapter_RV adapter_rv;
-    ArrayList<Item_RV> list_drink;
-    Adapter_RV adapter_rv_drink;
+    ArrayList<Item_RV> list_act;
+    Adapter_RV adapter_rv_act;
+    ArrayList<Item> list_act_item = new ArrayList<Item>();
+
+    ArrayList<Item_RV> list_gym;
+    Adapter_RV adapter_rv_gym;
+    ArrayList<Item> list_gym_item = new ArrayList<Item>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food);
+        setContentView(R.layout.activity_activities);
         ActionBar actionBar = getSupportActionBar();
         String time = ProcessDate();
         actionBar.setTitle(time);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
-        RecyclerView rv = (RecyclerView) findViewById(R.id.rv);
-        RecyclerView rv_drink = (RecyclerView) findViewById(R.id.rvDrink);
+        RecyclerView rv = (RecyclerView) findViewById(R.id.rv_activity);
+        RecyclerView rv_drink = (RecyclerView) findViewById(R.id.rv_gym);
 
         Init_ListFood();
         Init_ListDrink();
 
-        adapter_rv = new Adapter_RV(list, this);
-        rv.setAdapter(new ScaleInAnimationAdapter(adapter_rv));
+        adapter_rv_act = new Adapter_RV(list_act, this);
+        rv.setAdapter(new ScaleInAnimationAdapter(adapter_rv_act));
         rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-        adapter_rv_drink = new Adapter_RV(list_drink, this);
-        rv_drink.setAdapter(new ScaleInAnimationAdapter(adapter_rv_drink));
+        adapter_rv_gym = new Adapter_RV(list_gym, this);
+        rv_drink.setAdapter(new ScaleInAnimationAdapter(adapter_rv_gym));
         rv_drink.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
 
@@ -65,6 +71,7 @@ public class ActivitiesActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case android.R.id.home:
+                GetData();
                 onBackPressed();
                 return true;
 
@@ -72,6 +79,25 @@ public class ActivitiesActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void GetData() {
+        for(int i=0;i<list_act.size();i++)
+        {
+            if(list_act.get(i).getNumber()!=0)
+            {
+                list_act_item.add(new Item(list_act.get(i).getTitle(), list_act.get(i).getNumber()));
+            }
+        }
+        for(int i=0;i<list_gym.size();i++)
+        {
+            if(list_gym.get(i).getNumber()!=0)
+            {
+                list_gym_item.add(new Item(list_gym.get(i).getTitle(), list_gym.get(i).getNumber()));
+            }
+        }
+        Toast.makeText(this, list_act_item.size()+ " hoạt động và "+ list_gym_item.size()+" bài tập gym \n đã được cập nhật !!!", Toast.LENGTH_LONG).show();
+
     }
 
     private String ProcessDate() {
@@ -82,31 +108,31 @@ public class ActivitiesActivity extends AppCompatActivity {
 
 
     private void Init_ListDrink() {
-        list_drink = new ArrayList<Item_RV>();
-        list_drink.add(new Item_RV(R.drawable.ruou, "Bóng Đá", 0));
-        list_drink.add(new Item_RV(R.drawable.bia, "Cầu Lông", 0));
-        list_drink.add(new Item_RV(R.drawable.trasua, "Cờ Vua", 0));
-        list_drink.add(new Item_RV(R.drawable.nuocloc, "Golf", 0));
-        list_drink.add(new Item_RV(R.drawable.coca, "Tennis", 0));
-        list_drink.add(new Item_RV(R.drawable.soda, "Chạy Bộ", 0));
-        list_drink.add(new Item_RV(R.drawable.ruou, "Bóng Đá", 0));
-        list_drink.add(new Item_RV(R.drawable.bia, "Cầu Lông", 0));
-        list_drink.add(new Item_RV(R.drawable.trasua, "Cờ Vua", 0));
-        list_drink.add(new Item_RV(R.drawable.nuocloc, "Golf", 0));
-        list_drink.add(new Item_RV(R.drawable.coca, "Tennis", 0));
-        list_drink.add(new Item_RV(R.drawable.soda, "Chạy Bộ", 0));
+        list_act = new ArrayList<Item_RV>();
+        list_act.add(new Item_RV(R.drawable.ruou, "Bóng Đá", 0));
+        list_act.add(new Item_RV(R.drawable.bia, "Cầu Lông", 0));
+        list_act.add(new Item_RV(R.drawable.trasua, "Cờ Vua", 0));
+        list_act.add(new Item_RV(R.drawable.nuocloc, "Golf", 0));
+        list_act.add(new Item_RV(R.drawable.coca, "Tennis", 0));
+        list_act.add(new Item_RV(R.drawable.soda, "Chạy Bộ", 0));
+        list_act.add(new Item_RV(R.drawable.ruou, "Bóng Đá", 0));
+        list_act.add(new Item_RV(R.drawable.bia, "Cầu Lông", 0));
+        list_act.add(new Item_RV(R.drawable.trasua, "Cờ Vua", 0));
+        list_act.add(new Item_RV(R.drawable.nuocloc, "Golf", 0));
+        list_act.add(new Item_RV(R.drawable.coca, "Tennis", 0));
+        list_act.add(new Item_RV(R.drawable.soda, "Chạy Bộ", 0));
 
     }
 
     private void Init_ListFood() {
-        list = new ArrayList<Item_RV>();
-        list.add(new Item_RV(R.drawable.rices, "Hít Đất", 0));
-        list.add(new Item_RV(R.drawable.pho, "Xà Đơn", 0));
-        list.add(new Item_RV(R.drawable.cake, "Swat", 0));
-        list.add(new Item_RV(R.drawable.fastfood, "Đẩy Tạ", 0));
-        list.add(new Item_RV(R.drawable.rices, "Hít Đất", 0));
-        list.add(new Item_RV(R.drawable.pho, "Xà Đơn", 0));
-        list.add(new Item_RV(R.drawable.cake, "Swat", 0));
-        list.add(new Item_RV(R.drawable.fastfood, "Đẩy Tạ", 0));
+        list_gym = new ArrayList<Item_RV>();
+        list_gym.add(new Item_RV(R.drawable.rices, "Hít Đất", 0));
+        list_gym.add(new Item_RV(R.drawable.pho, "Xà Đơn", 0));
+        list_gym.add(new Item_RV(R.drawable.cake, "Swat", 0));
+        list_gym.add(new Item_RV(R.drawable.fastfood, "Đẩy Tạ", 0));
+        list_gym.add(new Item_RV(R.drawable.rices, "Hít Đất", 0));
+        list_gym.add(new Item_RV(R.drawable.pho, "Xà Đơn", 0));
+        list_gym.add(new Item_RV(R.drawable.cake, "Swat", 0));
+        list_gym.add(new Item_RV(R.drawable.fastfood, "Đẩy Tạ", 0));
     }
 }

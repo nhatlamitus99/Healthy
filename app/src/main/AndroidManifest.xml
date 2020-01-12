@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/healthcare"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StatisticActivity"></activity>
+        <activity android:name=".RecommendActivity"></activity>
+        <activity android:name=".StatisticActivity" />
         <activity android:name=".AlarmActivity" />
         <activity android:name=".WaterActivity" />
         <activity android:name=".SleepActivity" />
