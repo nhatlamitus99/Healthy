@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    android:background="#ACC7DA"
+    android:background="#E6E2E2"
     tools:context=".FoodActivity">
 
     <TextView
@@ -32,13 +32,6 @@
     </androidx.recyclerview.widget.RecyclerView>
 
 
-    <ImageButton
-        android:id="@+id/btnOK"
-        android:layout_width="146dp"
-        android:layout_height="67dp"
-        android:layout_gravity="center"
-        android:background="@drawable/okk">
 
-    </ImageButton>
 
 </LinearLayout>

@@ -1,6 +1,7 @@
 package com.example.healthy;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,6 +16,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainScreenActivity extends AppCompatActivity {
 
@@ -23,11 +27,16 @@ public class MainScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
+        ActionBar actionBar = getSupportActionBar();
+        String time = ProcessDate();
+        actionBar.setTitle(time);
 
         ImageButton imgbtnFood = (ImageButton) findViewById(R.id.food);
         ImageButton imgbtnExercise = (ImageButton) findViewById(R.id.exercise);
         ImageButton imgbtnSleep = (ImageButton) findViewById(R.id.sleep);
         ImageButton imgbtnWater = (ImageButton) findViewById(R.id.water);
+        ImageButton imgbtnAlarm = (ImageButton) findViewById(R.id.alarm);
+        ImageButton imgbtnSta = (ImageButton) findViewById(R.id.statistic);
 
         imgbtnFood.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,11 +70,40 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         });
 
+        imgbtnAlarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainScreenActivity.this, AlarmActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imgbtnSta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainScreenActivity.this, StatisticActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         imgbtnFeel = (ImageView) findViewById(R.id.feel);
         registerForContextMenu(imgbtnFeel);
 
 
+
+
+
+
     }
+
+    private String ProcessDate() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        String currentDate = sdf.format(new Date());
+        return  currentDate;
+    }
+
 
 
     @Override

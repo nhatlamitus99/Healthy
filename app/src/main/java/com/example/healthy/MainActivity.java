@@ -1,13 +1,20 @@
 package com.example.healthy;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CancellationSignal;
 import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.healthy.Dangky.Activity_Dangky;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        String time = ProcessDate();
+        actionBar.setTitle(time);
 
         ImageButton imgbtnSign = (ImageButton) this.findViewById(R.id.signup);
         imgbtnSign.setOnClickListener(new View.OnClickListener() {
@@ -36,5 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private String ProcessDate() {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        String currentDate = sdf.format(new Date());
+        return  currentDate;
     }
 }

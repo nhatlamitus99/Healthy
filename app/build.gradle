@@ -20,6 +20,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.github.lecho:hellocharts-library:1.5.8@aar'
     implementation 'jp.wasabeef:recyclerview-animators:2.2.0'
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
