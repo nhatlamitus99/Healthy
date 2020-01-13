@@ -3,22 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="#D6DDD0"
+    android:background="#E0E3E6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:background="#C0D8B0"
+        android:background="#EEF1F3"
         android:layout_height="55dp"
         android:text="Thiết lập tài khoản"
         android:textSize="25dp"
-        android:textColor="#021A97"
-        android:textStyle="bold"
+        android:textColor="#1C95E0"
         android:padding="5dp"
-        android:textAlignment="center"
-        style="@style/TextAppearance.AppCompat.Display4">
+        android:textAlignment="center">
 
     </TextView>
 
@@ -28,16 +26,38 @@
         android:textColor="#000000"
         android:paddingLeft="10dp"
         android:textSize="20dp"
+        android:hint="Họ và tên">
+
+    </TextView>
+
+    <EditText
+        android:paddingLeft="20dp"
+        android:id="@+id/name"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:textSize="20dp"
         android:hint="Ngày sinh">
 
     </TextView>
 
-    <CalendarView
-        android:layout_gravity="center"
+    <DatePicker
         android:layout_width="297dp"
-        android:layout_height="303dp">
+        android:layout_height="366dp"
+        android:id="@+id/date"
+        android:layout_gravity="center">
 
-    </CalendarView>
+    </DatePicker>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -50,7 +70,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:textColor="#020202"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Giới tính: "
@@ -78,37 +97,41 @@
 
             </RadioButton>
         </LinearLayout>
+
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:paddingBottom="10dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="168dp"
                 android:layout_height="wrap_content"
-                android:text="Chiều Cao:"
+                android:text="Chiều cao:"
                 android:textSize="20dp">
 
             </TextView>
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/height"
+                android:layout_width="155dp"
                 android:layout_height="wrap_content"
                 android:textSize="15dp">
 
             </EditText>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:text="Cân Nặng:"
+                android:text="Cân nặng:"
                 android:textSize="20dp">
 
             </TextView>
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/weight"
+                android:layout_width="161dp"
                 android:layout_height="wrap_content"
                 android:textSize="15dp">
 
@@ -121,30 +144,6 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <SeekBar
-            android:layout_weight="4"
-            android:layout_gravity="center"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:max="2"
-            android:progress="2">
-
-        </SeekBar>
-
-
-        <ImageButton
-            android:layout_gravity="center"
-            android:background="@drawable/ok"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/complete"
-            android:id="@+id/nextstep">
-
-        </ImageButton>
-    </LinearLayout>
 
 </LinearLayout>

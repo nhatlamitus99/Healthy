@@ -3,87 +3,169 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/ground"
     android:layout_width="match_parent"
+    android:background="#E0E1E2"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Dangky.Activity_Dangky2">
 
     <TextView
+        android:background="#ECE8E8"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:text="Thiết lập tài khoản"
-        android:textSize="35dp"
-        android:textColor="#021A97"
-        android:textStyle="bold"
+        android:layout_height="70dp"
+        android:text="Thông tin cá nhân"
+        android:textSize="30dp"
+        android:textColor="#4A5CBE"
         android:padding="10dp"
-        android:textAlignment="center"
-        style="@style/TextAppearance.AppCompat.Display4">
+        android:textAlignment="center">
 
     </TextView>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Chiều Cao:"
-        android:textSize="25dp">
-
-    </TextView>
-
-    <NumberPicker
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    </NumberPicker>
+        <TextView
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Họ và tên: "
+            android:textSize="20dp">
 
-    <TextView
-        android:paddingTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cân Nặng:"
-        android:textSize="25dp">
+        </TextView>
 
-    </TextView>
+        <TextView
+            android:textColor="#081152"
+            android:layout_weight="1"
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="25dp">
 
-    <NumberPicker
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        </TextView>
 
-    </NumberPicker>
+    </LinearLayout>
+
+
+
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="80dp">
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tuổi: "
+            android:textSize="20dp">
+
+        </TextView>
+
+        <TextView
+            android:textColor="#081152"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="age"
+            android:id="@+id/age"
+            android:textSize="25dp">
+
+        </TextView>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_gravity="bottom"
+        android:padding="20dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <SeekBar
-            android:layout_weight="4"
-            android:layout_gravity="center"
-            android:background="#94B4C9"
-            android:layout_width="250dp"
+        <TextView
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:max="3"
-            android:progress="3">
+            android:text="Chiều cao: "
+            android:textSize="20dp">
 
-        </SeekBar>
+        </TextView>
 
-
-        <ImageButton
-            android:layout_gravity="center"
-            android:background="@drawable/next"
-            android:layout_width="wrap_content"
+        <TextView
+            android:textColor="#081152"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/complete"
-            android:id="@+id/complete">
+            android:text="height"
+            android:id="@+id/height"
+            android:textSize="25dp">
 
-        </ImageButton>
+        </TextView>
+
     </LinearLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cân nặng: "
+            android:textSize="20dp">
+
+        </TextView>
+
+        <TextView
+            android:textColor="#081152"
+
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="weight"
+            android:id="@+id/weight"
+            android:textSize="25dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Giới tính: "
+            android:textSize="20dp">
+
+        </TextView>
+
+        <TextView
+            android:textColor="#081152"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="gender"
+            android:id="@+id/gender"
+            android:textSize="25dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+
 
 
 </LinearLayout>

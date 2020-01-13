@@ -15,6 +15,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.healthy.Dangky.Activity_Dangky1;
+
 import java.io.BufferedReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -40,6 +42,7 @@ public class MainScreenActivity extends AppCompatActivity {
         ImageButton imgbtnAlarm = (ImageButton) findViewById(R.id.alarm);
         ImageButton imgbtnSta = (ImageButton) findViewById(R.id.statistic);
         ImageButton imgbtnRec = (ImageButton) findViewById(R.id.idea);
+        ImageButton imgbtnSet = (ImageButton) findViewById(R.id.setting);
 
         imgbtnFood.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +100,13 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         });
 
-
+        imgbtnSet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainScreenActivity.this, Activity_Dangky1.class);
+                startActivity(intent);
+            }
+        });
 
         imgbtnFeel = (ImageView) findViewById(R.id.feel);
         registerForContextMenu(imgbtnFeel);

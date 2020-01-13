@@ -64,7 +64,7 @@ public class SleepActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case android.R.id.home:
-                GetData();
+                GetData();  //TODO
                 onBackPressed();
                 return true;
 
