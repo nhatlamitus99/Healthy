@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.healthy.R;
@@ -17,6 +18,7 @@ public class Activity_Dangky extends AppCompatActivity {
         setContentView(R.layout.activity__dangky);
 
         ImageButton btnNext = (ImageButton) this.findViewById(R.id.next);
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -81,7 +81,7 @@ public class SleepActivity extends AppCompatActivity {
             {
                 list_sleep.add(new Item(list.get(i).getTitle(), list.get(i).getNumber()));
             }
-            Toast.makeText(this, list_sleep.size()+" hoạt động được cập nhật !!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, list_sleep.size()+" hoạt động được cập nhật !!!", Toast.LENGTH_SHORT).show();
         }
     }
 

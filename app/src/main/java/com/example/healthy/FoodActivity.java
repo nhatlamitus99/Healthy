@@ -92,12 +92,12 @@ public class FoodActivity extends AppCompatActivity {
         }
         for(int i=0;i<list_drink.size();i++)
         {
-            if(list.get(i).getNumber()!=0)
+            if(list_drink.get(i).getNumber()!=0)
             {
                 list_drinks.add(new Item(list.get(i).getTitle(), list.get(i).getNumber()));
             }
         }
-        Toast.makeText(this, list_food.size()+ " món ăn và "+ list_drinks.size()+" thức uống \n đã được cập nhật !!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, list_food.size()+ " món ăn và "+ list_drinks.size()+" thức uống \n đã được cập nhật !!!", Toast.LENGTH_SHORT).show();
     }
 
     private String ProcessDate() {

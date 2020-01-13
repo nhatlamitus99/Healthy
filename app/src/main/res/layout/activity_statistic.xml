@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Tình trạng sức khỏe trong tuần "
+        android:text="Tình trạng sức khỏe 7 ngày gần nhất "
         style="@style/TextAppearance.AppCompat.Body1"
         android:textSize="20dp"
         android:paddingTop="20dp"

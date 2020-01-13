@@ -1,5 +1,6 @@
 package com.example.healthy;
 
+import android.app.TimePickerDialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -10,11 +11,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Dictionary;
 import java.util.List;
 
@@ -63,7 +66,7 @@ public class Adapter_RV extends RecyclerView.Adapter<Adapter_RV.ViewHolder> {
             @Override
             public void onClick(View view, final int position, boolean isLongClick) {
                 holder.btnPlus.setVisibility(View.VISIBLE);
-                holder.layout.setBackgroundColor(Color.rgb(200,137,27));
+                holder.layout.setBackgroundColor(Color.rgb(50,114,153));
                 holder.btnPlus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -71,9 +74,25 @@ public class Adapter_RV extends RecyclerView.Adapter<Adapter_RV.ViewHolder> {
                         holder.number.setText(temp+"");
                         list.get(position).setNumber(temp);
 
+
                     }
                 });
-            }
+
+
+                Calendar calendar = Calendar.getInstance();
+                int h = calendar.get(Calendar.HOUR_OF_DAY);
+                int m = calendar.get(Calendar.MINUTE);
+                TimePickerDialog timePickerDialog = new TimePickerDialog(mContext, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        Toast.makeText(mContext, hourOfDay+":"+minute, Toast.LENGTH_SHORT).show();
+                    }
+                }, h, m, true);
+                timePickerDialog.show();
+
+              }
+
+
         });
 
     }

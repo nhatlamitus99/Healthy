@@ -96,7 +96,7 @@ public class ActivitiesActivity extends AppCompatActivity {
                 list_gym_item.add(new Item(list_gym.get(i).getTitle(), list_gym.get(i).getNumber()));
             }
         }
-        Toast.makeText(this, list_act_item.size()+ " hoạt động và "+ list_gym_item.size()+" bài tập gym \n đã được cập nhật !!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, list_act_item.size()+ " hoạt động và "+ list_gym_item.size()+" bài tập gym \n đã được cập nhật !!!", Toast.LENGTH_SHORT).show();
 
     }
 

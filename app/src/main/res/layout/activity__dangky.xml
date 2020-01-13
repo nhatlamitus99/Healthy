@@ -12,9 +12,9 @@
     <TextView
         android:background="#FCFCFC"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_height="55dp"
         android:text="Đăng ký tài khoản"
-        android:textSize="35dp"
+        android:textSize="25dp"
         android:textColor="#021A97"
         android:textStyle="bold"
         android:padding="10dp"
@@ -28,12 +28,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tên đăng nhập:"
-        android:textSize="25dp">
+        android:textSize="20dp">
 
     </TextView>
 
     <EditText
         android:textColor="#020202"
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="25dp">
@@ -45,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mật khẩu:"
-        android:textSize="25dp">
+        android:textSize="20dp">
 
     </TextView>
 
@@ -53,6 +54,7 @@
         android:textColor="#020202"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/password"
         android:textSize="25dp">
     </EditText>
 
@@ -82,7 +84,7 @@
             android:background="@drawable/nextt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/nextt"
+            android:src="@drawable/next"
             android:id="@+id/next">
 
         </ImageButton>

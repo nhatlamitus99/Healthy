@@ -11,9 +11,9 @@
     <TextView
         android:layout_width="match_parent"
         android:background="#C0D8B0"
-        android:layout_height="65dp"
+        android:layout_height="55dp"
         android:text="Thiết lập tài khoản"
-        android:textSize="35dp"
+        android:textSize="25dp"
         android:textColor="#021A97"
         android:textStyle="bold"
         android:padding="5dp"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:paddingLeft="10dp"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:hint="Ngày sinh">
 
     </TextView>
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Giới tính: "
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:paddingLeft="10dp"
                 android:paddingBottom="5dp"
                 >
@@ -65,11 +65,13 @@
                 android:paddingLeft="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/nam"
                 android:text="Nam">
 
             </RadioButton>
             <RadioButton
                 android:paddingLeft="15dp"
+                android:id="@+id/nu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nữ">
@@ -139,7 +141,7 @@
             android:background="@drawable/ok"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ok"
+            android:src="@drawable/complete"
             android:id="@+id/nextstep">
 
         </ImageButton>

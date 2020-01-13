@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import lecho.lib.hellocharts.model.Axis;
@@ -28,9 +29,13 @@ public class StatisticActivity extends AppCompatActivity {
         actionBar.setTitle("Thống Kê ");
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        Calendar calendar = Calendar.getInstance();
+        int m = calendar.get(Calendar.MONTH)+1;
+        int d = calendar.get(Calendar.DAY_OF_MONTH);
+
         LineChartView lineChartView = findViewById(R.id.chart);
-        String[] axisData = {"Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "CN"};
-        int[] yAxisData = {50, 20, 15, 30, 20, 60, 15};
+        String[] axisData = {(d-6)+"/"+m, (d-5)+"/"+m, (d-4)+"/"+m, (d-3)+"/"+m, (d-2)+"/"+m, (d-1) +"/"+m, d+"/"+m};
+        int[] yAxisData = {50, 100, 25, 30, 0, 75, 75};
         List yAxisValues = new ArrayList();
         List axisValues = new ArrayList();
         Line line = new Line(yAxisValues).setColor(Color.BLUE);

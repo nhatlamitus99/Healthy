@@ -85,7 +85,7 @@ public class WaterActivity extends AppCompatActivity {
             {
                 list_water.add(new Item(list.get(i).getTitle(), list.get(i).getNumber()));
             }
-            Toast.makeText(this, list_water.size()+" hoạt động được cập nhật !!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, list_water.size()+" hoạt động được cập nhật !!!", Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="#EEE9E9"
+    android:background="#F5F1F1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Đăng nhập tài khoản"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textColor="#021A97"
         android:textStyle="bold"
         android:padding="10dp"
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tên đăng nhập:"
-        android:textSize="25dp">
+        android:textSize="20dp">
 
     </TextView>
 
@@ -47,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Mật khẩu:"
-        android:textSize="25dp">
+        android:textSize="20dp">
 
     </TextView>
 
@@ -65,7 +65,7 @@
 
     <ImageButton
         android:id="@+id/login"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/logins">
@@ -75,12 +75,12 @@
     <TextView
         android:textColor="#A25A5A"
         android:textAlignment="center"
-        android:paddingTop="60dp"
+        android:paddingTop="100dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Bạn chưa có tài khoản?"
         android:paddingBottom="10dp"
-        android:textSize="20dp">
+        android:textSize="15dp">
 
     </TextView>
 
