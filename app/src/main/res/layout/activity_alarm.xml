@@ -268,7 +268,7 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="5dp"
                         android:paddingRight="30dp"
-                        android:text="Tối "
+                        android:text="Trưa "
                         android:id="@+id/wake2" >
 
                     </RadioButton>
